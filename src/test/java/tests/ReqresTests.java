@@ -19,7 +19,7 @@ public class ReqresTests extends BaseTest{
     @Test
     public void testList() throws FileNotFoundException {
         UsersList expectedList;
-        expectedList = gson.fromJson(new FileReader("src/test/resources/expectedList.json"), UsersList.class);
+        expectedList = gson.fromJson(new FileReader("src\\test\\java\\resourсes\\expectedList.json"), UsersList.class);
 
         UsersList list = new UsersAdapter().get(1);
         assertEquals(list, expectedList);
@@ -53,7 +53,7 @@ public class ReqresTests extends BaseTest{
     @Test
     public void getList() throws FileNotFoundException {
         UsersList expectedList;
-        expectedList = gson.fromJson(new FileReader("src/test/java/resources/expectedList.json"), UsersList.class);
+        expectedList = gson.fromJson(new FileReader("src\\test\\java\\resourсes\\expectedList2.json"), UsersList.class);
         UsersList list = new UsersAdapter().get(2);
         assertEquals(list, expectedList);
     }
@@ -61,7 +61,7 @@ public class ReqresTests extends BaseTest{
     @Test
     public void getSingleUser() throws FileNotFoundException {
         SingleUser expectedUser;
-        expectedUser = gson.fromJson(new FileReader("src/test/java/resources/expectedUser.json"), SingleUser.class);
+        expectedUser = gson.fromJson(new FileReader("src\\test\\java\\resourсes\\expectedUser.json"), SingleUser.class);
         SingleUser singleUser = new UsersAdapter().getUser(2);
         assertEquals(singleUser,expectedUser);
     }
@@ -81,7 +81,7 @@ public class ReqresTests extends BaseTest{
     @Test
     public void getResourceList() throws FileNotFoundException {
         ResourcesList expectedList;
-        expectedList = gson.fromJson(new FileReader("src/test/java/resources/expectedResources.json"), ResourcesList.class);
+        expectedList = gson.fromJson(new FileReader("src\\test\\java\\resourсes\\expectedResources.json"), ResourcesList.class);
         ResourcesList list = new ResourcesAdapter().get();
         assertEquals(list, expectedList);
     }
@@ -89,7 +89,7 @@ public class ReqresTests extends BaseTest{
     @Test
     public void getSingleResource() throws FileNotFoundException {
         SingleResource expectedResource;
-        expectedResource = gson.fromJson(new FileReader("src/test/java/resources/expectedSingleResource.json"), SingleResource.class);
+        expectedResource = gson.fromJson(new FileReader("src\\test\\java\\resourсes\\expectedSingleResource.json"), SingleResource.class);
         SingleResource singleResource = new ResourcesAdapter().getResource(2);
         assertEquals(expectedResource,singleResource);
     }
@@ -201,7 +201,7 @@ public class ReqresTests extends BaseTest{
     @Test
     public void getDelayedResponse() throws FileNotFoundException {
         UsersList expectedList;
-        expectedList = gson.fromJson(new FileReader("src/test/java/resources/expectedDelayResponse.json"), UsersList.class);
+        expectedList = gson.fromJson(new FileReader("src\\test\\java\\resourсes\\expectedDelayResponse.json"), UsersList.class);
         UsersList list = new UsersAdapter().getDelayedResponse(3);
         assertEquals(list, expectedList);
     }

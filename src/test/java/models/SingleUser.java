@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 public class SingleUser {
-    @Expose
+    //@Expose
     BIConversion.User data;
 }

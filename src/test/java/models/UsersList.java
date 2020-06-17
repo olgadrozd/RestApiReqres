@@ -17,6 +17,5 @@ public class UsersList {
     @SerializedName("total_pages")
     @Expose
     int totalPages;
-    @Expose
     List<BIConversion.User> data;
 }
